@@ -1,4 +1,4 @@
-# Blog Application with ASP.net MVC
+# Blog Application with C# ASP.net MVC
 
 In this simple Blog Application, there are two types of users:
 
