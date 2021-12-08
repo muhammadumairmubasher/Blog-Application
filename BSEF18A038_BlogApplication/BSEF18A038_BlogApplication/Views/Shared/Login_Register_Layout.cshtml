@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Application</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    @*<script type="text/javascript">
+        function validate_login() {
+            if ($('#login_email_text').val().length > 0 && $('#login_password_text').val().length > 0) {
+                $("#login_button").prop("disabled", false);
+            }
+            else {
+                $("#login_button").prop("disabled", true);
+            }
+        }
+        function validate_register() {
+            if ($('#register_name_text').val().length > 0 && $('#register_email_text').val().length > 0 && $('#register_password_text').val().length > 0) {
+                $("#register_button").prop("disabled", false);
+            }
+            else {
+                $("#register_button").prop("disabled", true);
+            }
+        }
+    </script>*@
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Blog Application</a>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link w3-button" asp-area="" asp-controller="Home" asp-action="About">About</a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="nav-link w3-button" style="color: rgba(255,255,255,.5)" asp-area="" asp-controller="Home" asp-action="Index">Login</a>
+                <a class=" nav-link float-right w3-button " style="color: rgba(255,255,255,.5)" asp-area="" asp-controller="Home" asp-action="SignupForm">Signup</a>
+                <a class=" nav-link float-right w3-button " style="color: rgba(255,255,255,.5)" asp-area="" asp-controller="Home" asp-action="AdminLoginForm">Admin</a>
+            </div>
+        </nav>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "Login_Register_Layout";
+}
+<link href="~/css/site.css" rel="stylesheet" />
+<div class="container d-flex justify-content-center">
+
+    <div class="mt-5 w-50">
+        <h3>Admin Login Form</h3>
+        <hr style="margin:1px; border-top:2px solid silver">
+
+        <form method="post" asp-controller="Home" asp-action="AdminLoginForm">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="text-left">
+                <label class="col-form-label" for="Email">Email</label><br>
+                <input id="adminLoginEmail" class="form-control" type="email" name="adminLoginEmail">
+            </div>
+            <div class="text-left">
+                <label class="col-form-label" for="Password">Password</label><br>
+                <input id="adminLoginPassword" class="form-control" type="password" name="adminLoginPassword"><br><br>
+            </div>
+            <input id="login_button" class="btn btn-dark" type="submit" value="Login" />
+
+        </form>
+    </div>
+</div>

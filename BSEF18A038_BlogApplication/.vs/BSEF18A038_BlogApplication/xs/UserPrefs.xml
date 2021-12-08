@@ -1,0 +1,48 @@
+﻿<Properties StartupConfiguration="{AECB589E-0EF7-4C46-92CB-0EBB7213ADA8}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BSEF18A038_BlogApplication/Models/UserRepository.cs">
+    <Files>
+      <File FileName="BSEF18A038_BlogApplication/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="BSEF18A038_BlogApplication/Controllers/MainController.cs" />
+      <File FileName="BSEF18A038_BlogApplication/Models/PostRepository.cs" />
+      <File FileName="BSEF18A038_BlogApplication/Models/User.cs" />
+      <File FileName="BSEF18A038_BlogApplication/Models/UserRepository.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BSEF18A038_BlogApplication" expanded="True">
+            <Node name="BSEF18A038_BlogApplication" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="UserRepository.cs" selected="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Admin" expanded="True" />
+                <Node name="Main" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="Images" expanded="True" />
+                <Node name="lib" expanded="True" />
+              </Node>
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.BSEF18A038__BlogApplication PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

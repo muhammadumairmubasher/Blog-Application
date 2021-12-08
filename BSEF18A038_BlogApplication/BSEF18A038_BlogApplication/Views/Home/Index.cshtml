@@ -1,0 +1,31 @@
+﻿@*@using BSEF18A038_BlogApplication.Models
+    @model User
+    @{
+        Layout = "Login_Register_Layout";
+    }
+    <script>
+        $(document).ready(function () {
+            validate_login();
+                $('#login_email_text, #login_password_text').change(validate_login);
+        });
+    </script>
+    <h2 class="text-center">Welcome to Blog</h2>
+    <div class="container d-flex justify-content-center">
+
+        <div class="mt-5 w-50">
+            <h3 >Login Form</h3>
+
+            <form method="post" asp-controller="Home" asp-action="Login">
+                <div class="text-left">
+                    <label class="col-form-label" asp-for="Email"></label><br>
+                    <input id="login_email_text" class="form-control" type="email" asp-for="Email"><br>
+                </div>
+                <div class="text-left">
+                    <label class="col-form-label" asp-for="Password"></label><br>
+                    <input id="login_password_text" class="form-control" type="password" asp-for="Password"><br>
+                </div>
+                <input id="login_button" class="btn btn-dark" type="submit" value="Login"/>
+
+            </form>
+        </div>
+    </div>*@

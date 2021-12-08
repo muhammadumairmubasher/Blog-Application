@@ -1,0 +1,41 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@using BSEF18A038_BlogApplication.Models
+@model Post
+@{
+    Layout = "_Layout";
+}
+
+<div class="container mt-5 bg-light mb-3">
+    <div class="container mt-3">
+        <div style="display:inline-flex">
+            <div>
+                <a asp-area="" asp-controller="Main" asp-route-id="@Model.Id" asp-action="PostView"><img src="/Images/@Model.UserProfilePicture" class="rounded-circle" style="height:100px;width:100px" /></a>
+            </div>
+            <div class="container">
+                <div class="container">
+                    <div class="mr-5" style="display:inline-flex">
+                        <h6 style="float:left; color:mediumblue; margin:5px">@Model.UserEmail</h6>
+                        <h6 class="ml-3" style="float:right; margin:5px">@Model.Date</h6>
+                    </div>
+                    <div>
+                        @if (HttpContextAccessor.HttpContext.Session.GetInt32("UserId")== Model.UserId)
+                        {
+                        <a class="btn btn-dark text-white" asp-area="" asp-route-id="@Model.Id" asp-controller="Main" asp-action="EditPost">Update</a>
+                        <a class="btn btn-danger text-white" asp-area="" asp-controller="Main" asp-route-id="@Model.Id" asp-action="DeletePost">Delete</a>
+                        }
+                    </div>
+                    <hr style="margin:1px" />
+                </div>
+                <div class="container">
+                    <h4><a style="font-weight:bold" asp-area="" asp-controller="Main" asp-route-id="@Model.Id" asp-action="PostView">@Model.Title</a></h4>
+
+                </div>
+                <div class="container">
+                    <p> @Model.Content  </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

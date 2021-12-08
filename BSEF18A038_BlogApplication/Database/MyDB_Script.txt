@@ -1,0 +1,20 @@
+CREATE TABLE [dbo].[Posts] (
+    [Id]                 INT            IDENTITY (1, 1) NOT NULL,
+    [Title]              NVARCHAR (50)  NOT NULL,
+    [Content]            NVARCHAR (MAX) NOT NULL,
+    [UserId]             INT            NOT NULL,
+    [Email]              NVARCHAR (50)  NOT NULL,
+    [Date]               NVARCHAR (50)  NOT NULL,
+    [UserProfilePicture] NVARCHAR (50)  NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+CREATE TABLE [dbo].[Users] (
+    [Id]       INT           IDENTITY (1, 1) NOT NULL,
+    [Username] NVARCHAR (50) NOT NULL,
+    [Email]    NVARCHAR (50) NOT NULL,
+    [Password] NVARCHAR (50) NOT NULL,
+    [picture]  NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [uc_Username] UNIQUE NONCLUSTERED ([Username] ASC)
+);

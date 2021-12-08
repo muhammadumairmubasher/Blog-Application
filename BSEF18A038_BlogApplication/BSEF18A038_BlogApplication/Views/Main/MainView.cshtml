@@ -1,0 +1,54 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@model List<BSEF18A038_BlogApplication.Models.Post>
+@{
+    Layout = "_Layout";
+}
+
+<div class="container mt-3 mb-3">
+    <div>
+        @if (HttpContextAccessor.HttpContext.Session.GetString("UserName") != null)
+        {
+            <h1 style="text-transform:capitalize">Welcome @HttpContextAccessor.HttpContext.Session.GetString("UserName")</h1>
+        }
+
+    </div>
+    <div>
+        <a class="btn btn-primary text-white" asp-area="" asp-controller="Main" asp-action="CreateNewPost">Create Post</a>
+    </div>
+
+    <div class="mt-3">
+        <table class="table table-hover bg-light">
+            @foreach (BSEF18A038_BlogApplication.Models.Post p in Model)
+            {
+                <tr>
+                    <td style="border-top: 10px solid white; ">
+                        <div style="display:inline-flex">
+                            <div>
+                                <a asp-area="" asp-controller="Main" asp-route-id="@p.Id" asp-action="PostView"><img src="/Images/@p.UserProfilePicture" class="rounded-circle" style="height:100px;width:100px" /></a>
+                            </div>
+                            <div class="container">
+                                <div class="container">
+                                    <div class="mr-5" style="display:inline-flex">
+                                        <h6 style="float:left; color:mediumblue; margin:5px"> @p.UserEmail</h6>
+                                        <h6 class="ml-3" style="float:right; margin:5px">@p.Date</h6>
+                                    </div>
+                                    <hr style="margin:1px" />
+                                </div>
+                                <div class="container">
+                                    <h4><a style="font-weight:bold" asp-area="" asp-route-id="@p.Id" asp-controller="Main" asp-action="PostView">@p.Title</a></h4>
+
+                                </div>
+                                <div class="container">
+                                    <p> @p.Content  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+            }
+        </table>
+
+    </div>
+</div>

@@ -1,0 +1,44 @@
+﻿@using BSEF18A038_BlogApplication.Models
+@model Post
+@{
+    Layout = "_Layout";
+}
+
+<div class="container d-flex justify-content-center">
+
+    <div class="col-md-8 col-md-offset-2 mt-5 w-50">
+
+        <h3>Edit post</h3>
+
+        <form method="post" asp-controller="Main" asp-action="EditPost">
+
+            <div>
+                <label class="col-form-label" asp-for="Id"></label><br>
+                <input class="form-control" asp-for="Id" readonly><br>
+            </div>
+
+            <div class="form-group">
+                <label class="col-form-label" asp-for="Title"></label>
+                <input class="form-control" type="text" name="title" asp-for="Title" />
+                <span asp-validation-for="Title"></span><br>
+            </div>
+
+            <div class="form-group">
+                <label class="col-form-label" asp-for="Content"></label><br>
+                <textarea rows="7" class="form-control" asp-for="Content"></textarea>
+                <span asp-validation-for="Content"></span><br><br>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">
+                    Update
+                </button>
+                <button class="btn btn-default" asp-controller="Main" asp-route-id="Id" asp-action="PostView">
+                    Cancel
+                </button>
+            </div>
+
+        </form>
+    </div>
+
+</div>

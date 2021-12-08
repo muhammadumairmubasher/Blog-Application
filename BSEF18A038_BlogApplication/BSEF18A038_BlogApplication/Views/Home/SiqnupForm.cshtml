@@ -1,0 +1,41 @@
+﻿@using BSEF18A038_BlogApplication.Models
+@model User
+@{
+    Layout = "Login_Register_Layout";
+}
+
+@*<script>
+        $(document).ready(function () {
+            validate_register();
+            $('#register_name_text, #register_email_text, register_password_text').change(validate_register);
+        });
+    </script>*@
+<link href="~/css/site.css" rel="stylesheet" />
+<div class="container d-flex justify-content-center">
+    <div class="w-50 mt-5">
+        <h3>Registration Form</h3>
+        <hr style="margin:1px; border-top:2px solid silver">
+        <form method="post" asp-controller="Home" asp-action="SignupForm">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="text-left">
+                <label class="col-form-label" asp-for="Username"></label><br>
+                <input id="register_name_text" class="form-control" asp-for="Username">
+                <span asp-validation-for="Username"></span><br>
+            </div>
+            <div class="text-left">
+                <label class="col-form-label" asp-for="Email"></label><br>
+                <input id="register_email_text" class="form-control" type="email" asp-for="Email">
+                <span asp-validation-for="Email"></span><br>
+            </div>
+            <div class="text-left">
+                <span>New</span>
+                <label class="col-form-label" asp-for="Password"></label><br>
+                <input id="register_password_text" class="form-control" type="password" asp-for="Password">
+                <span asp-validation-for="Password  "></span><br><br>
+            </div>
+            <input id="register_button" class="btn btn-dark" type="submit" value="Register Now" />
+
+        </form>
+    </div>
+
+</div>

@@ -1,0 +1,40 @@
+﻿@model List<BSEF18A038_BlogApplication.Models.User>
+@{
+    Layout = "Admin_Layout";
+}
+<div class="container mt-3 w-50 d-flex">
+    <a class="btn btn-primary" asp-controller="Admin" asp-action="CreateUser">Add New User</a>
+</div>
+
+<div class="container mt-3 w-50 d-flex">
+    <div asp-validation-summary="ModelOnly"></div>
+</div>
+
+<div class="container mt-3 w-50 d-flex justify-content-center">
+    <table class="table table-hover bg-light">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (BSEF18A038_BlogApplication.Models.User users in Model)
+            {
+                <tr  style="border-bottom: 5px solid white">
+                    <td>@users.Id</td>
+                    <td>@users.Username</td>
+                    <td>@users.Email</td>
+                    <td>@users.Password</td>
+                    <td>
+                        <a class="btn btn-warning" asp-controller="Admin" asp-action="UpdateUser" asp-route-id="@users.Id">Update</a>
+                        <a class="btn btn-danger" asp-controller="Admin" asp-action="DeleteUser" asp-route-id="@users.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
